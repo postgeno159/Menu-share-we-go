@@ -17,9 +17,10 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import im3 from '../../image/im3.png'
+import { border } from '@material-ui/system';
 
-const drawerWidth = 250;
-
+const drawerWidth = 240;
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -73,8 +74,10 @@ const useStyles = makeStyles(theme => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
     marginLeft: 0,
+    
   },
 }));
+
 
 export default function PersistentDrawerLeft() {
   const classes = useStyles();
@@ -127,9 +130,28 @@ export default function PersistentDrawerLeft() {
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </div>
+          <List>
+          <center>
+            <img src={im3}></img>
+            <br></br>
+              โปรไฟล์ (ชื่อเล่น)
+          </center>
+          </List>
         <Divider />
         <List>
           {['ประวัติการเดินทาง', 'ข้อมูลส่วนตัว', 'แจ้งเหตุ'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+        <br></br> <br></br><br></br><br></br> <br></br><br></br><br></br>
+        <br></br> <br></br> <br></br><br></br><br></br>
+      
+        <List>
+          {['ออกจากระบบ'].map((text, index) => (
+          
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
@@ -150,5 +172,8 @@ export default function PersistentDrawerLeft() {
         
        </main>
     </div>
+    
+    
+    
   );
 }
