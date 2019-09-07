@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: 'top conner',
     color: theme.palette.text.secondary,
   },
 }));
@@ -21,12 +21,15 @@ export default function FullWidthGrid() {
   return (
     <div className={classes.root}>
       <br></br><br></br><br></br>
-      <Grid container spacing={3}>
+      <Grid container spacing={6}>
         <Grid item xs={12}>
-        
-          <Paper className={classes.paper}><img src={im3} height=20 widght=20></img>ชื่อผู้ใช้ที่เคยร่วมทางคนที่ 1 </Paper>
+          <Paper  className={classes.paper}><img src={im3} border="1" width="55" height='55' ></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>ชื่อผู้ใช้ที่เคยร่วมทางคนที่ 1</b>
+          <br></br>genodsvdsvdsv
+           </Paper>
         </Grid>
       </Grid>
+      
     </div>
   );
 }
