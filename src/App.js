@@ -8,8 +8,8 @@ import History from './compronents/History'
 function App() {
   return (
     <React.Fragment>
-      <Menu></Menu>
-      {/* <History></History> */}
+      {/* <Menu></Menu> */}
+      <History></History>
     </React.Fragment>
     
 
