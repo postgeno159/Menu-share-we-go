@@ -1,27 +1,30 @@
-import React, { Component } from 'react';
-import { Widget } from 'react-chat-widget';
-import abc from '../../image/im2.png'
-import './style.css'
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
 
-import 'react-chat-widget/lib/styles.css';
+const useStyles2 = makeStyles(theme => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 150,
+  },
+}));
 
-class Chat extends Component {
-    render() {
-        return (
-            <div className="App">
-                <Widget style={
-                    {
-                        position: 'absolute',
-                        left: 0,
-                    }} />
-                    <h2 style={{
-                        borderBottom: '1px solid #dee5ef',
-                        background: '#FAFAFA',
-                        }}>GENO</h2>
-                        <img className='aa' height='50px' width='50px' src={abc}/>
-            </div>
-        );
-    }
+export default function TextFieldMargins() {
+  const classes = useStyles2();
+
+  return (
+    <div className={classes.container}>
+      <TextField
+        label="สถานที่"
+        id="margin-none"
+        defaultValue="ต้นทาง"
+        className={classes.textField}
+      />
+    </div>
+  );
 }
-
-export default Chat;
