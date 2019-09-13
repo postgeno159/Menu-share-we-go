@@ -4,6 +4,12 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import im3 from '../../image/im3.png'
 import TextField from '@material-ui/core/TextField';
+import TextFieldMargins from '../Chat/index'
+import TextFieldMargins2 from '../Chat/index2'
+import geno from '../../image/geno.jpg'
+import ing from '../../image/ing.jpg'
+import bent from '../../image/bent.jpg'
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -17,62 +23,58 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-// const useStyles2 = makeStyles(theme => ({
-//   container: {
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//   },
-//   textField: {
-//     marginLeft: theme.spacing(1),
-//     marginRight: theme.spacing(1),
-//     width: 150,
-//   },
-// }));
 
 export default function FullWidthGrid() {
   const classes = useStyles();
-  
-// export default function TextFieldMargins() {
-//     const classes = useStyles2();
-
-// return (
-//       <div className={classes.container}>
-//         <TextField
-//           label="สถานที่"
-//           id="margin-none"
-//           defaultValue="ต้นทาง"
-//           className={classes.textField}
-//         />
-//       </div>
-//     );
-//   }
 
 return (
+  <React.Fragment>
     <div className={classes.root}>
       <br></br><br></br><br></br>
       <Grid container spacing={6}>
+        
         <Grid item xs={12}>
+          <body bgcolor= "dddddd">
+           <p>วันที่ (xx/xx/xxxx)</p>
+          </body>
           <hr></hr>
-          <Paper  className={classes.paper}><img src={im3} border="1" width="55" height='55' ></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <b>ชื่อผู้ใช้ที่เคยร่วมทางคนที่ 1</b>
-          <br></br>genodsvdsvdsv
+          <Paper  className={classes.paper}>
+            <img src={geno}  width="70" height='70' align='left' ></img>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>นายอัษฎาวุธ สาครเจริญ</b>
+          <br></br>
+          <TextFieldMargins></TextFieldMargins>
+          <TextFieldMargins2></TextFieldMargins2>
            </Paper>
-           <br></br>
-           <hr></hr>
-           <Paper  className={classes.paper}><img src={im3} border="1" width="55" height='55' ></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <b>ชื่อผู้ใช้ที่เคยร่วมทางคนที่ 2</b>
-          <br></br>genodsvdsvdsv
+           <body bgcolor= "dddddd">
+           <p>วันที่ (xx/xx/xxxx)</p>
+           p2
+          </body>
+          <hr>
+          </hr>
+           <Paper  className={classes.paper}>
+             <img src={ing}  width="70" height='70' align='left' ></img>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>นายธนพัฒน์ ทองนุกุล</b>
+          <TextFieldMargins></TextFieldMargins>  
+          <TextFieldMargins2></TextFieldMargins2>
            </Paper>
-           <br></br>
+           <body bgcolor= "dddddd">
+           <p>วันที่ (xx/xx/xxxx)</p>
+          </body>
+          
            <hr></hr>
-           <Paper  className={classes.paper}><img src={im3} border="1" width="55" height='55' ></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <b>ชื่อผู้ใช้ที่เคยร่วมทางคนที่ 3</b>
-          <br></br>genodsvdsvdsv
+           <Paper  className={classes.paper}><img src={bent}  border="0" width="70" height='70' align='left' border ='1'></img>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>นายเอกรินท์ เพียงดี</b>
+          <TextFieldMargins></TextFieldMargins> 
+          <TextFieldMargins2></TextFieldMargins2>
            </Paper>
         </Grid>
       </Grid>
       
     </div>
+    </React.Fragment>
   );
 }
 

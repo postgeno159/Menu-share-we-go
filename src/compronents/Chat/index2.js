@@ -11,21 +11,19 @@ const useStyles2 = makeStyles(theme => ({
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: 120,
-    position: 'absolute',
-    
-
+    left: 150,
   },
 }));
 
-export default function TextFieldMargins() {
+export default function TextFieldMargins2() {
   const classes = useStyles2();
 
   return (
     <div className={classes.container}>
       <TextField
-        label="จุดเริ่มต้น"
+        label="จุดสิ้นสุด"
         id="margin-none"
-        placeholder="ต้นทาง"
+        placeholder="ปลายทาง"
         className={classes.textField}
       />
     </div>
