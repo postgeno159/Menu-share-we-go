@@ -9,6 +9,7 @@ import TextFieldMargins2 from '../Chat/index2'
 import geno from '../../image/geno.jpg'
 import ing from '../../image/ing.jpg'
 import bent from '../../image/bent.jpg'
+import nut from '../../image/nut.jpg'
 
 
 
@@ -32,8 +33,7 @@ return (
     <div className={classes.root}>
       <br></br><br></br><br></br>
       <Grid container spacing={6}>
-        
-        <Grid item xs={12}>
+         <Grid item xs={12}>
           <body bgcolor= "dddddd">
            <p>วันที่ (xx/xx/xxxx)</p>
           </body>
@@ -48,14 +48,27 @@ return (
            </Paper>
            <body bgcolor= "dddddd">
            <p>วันที่ (xx/xx/xxxx)</p>
-           p2
+           
           </body>
-          <hr>
+          <hr >
           </hr>
            <Paper  className={classes.paper}>
-             <img src={ing}  width="70" height='70' align='left' ></img>
+             <img src={ing}    width="70" height='70' align='left' ></img>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <b>นายธนพัฒน์ ทองนุกุล</b>
+          <TextFieldMargins></TextFieldMargins>  
+          <TextFieldMargins2></TextFieldMargins2>
+           </Paper>
+           <body bgcolor= "dddddd">
+           <p>วันที่ (xx/xx/xxxx)</p>
+          </body>
+
+          <hr >
+          </hr>
+           <Paper  className={classes.paper}>
+             <img src={nut}    width="70" height='70' align='left' ></img>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <b>นายณัฐพงศ์ ช่วยประคอง</b>
           <TextFieldMargins></TextFieldMargins>  
           <TextFieldMargins2></TextFieldMargins2>
            </Paper>

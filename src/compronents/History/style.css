@@ -1,4 +1,10 @@
+import React from 'react';
+import './App.css';
 
-bent.jpg{
-    border-radius: 50%;
+function App(){
+    return(
+        <div className="my-component" />
+    );
 }
+
+export default App;
